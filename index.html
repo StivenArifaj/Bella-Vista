@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bella Vista - Authentic Italian Restaurant</title>
+  <meta name="description"
+    content="Experience authentic Italian cuisine at Bella Vista. Fresh ingredients, traditional recipes, and warm hospitality in the heart of the city." />
+  <meta name="author" content="Bella Vista Restaurant" />
+
+  <meta property="og:title" content="Bella Vista - Authentic Italian Restaurant" />
+  <meta property="og:description"
+    content="Experience authentic Italian cuisine at Bella Vista. Fresh ingredients, traditional recipes, and warm hospitality in the heart of the city." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1514362545857-3bc16549766b?q=80&w=1200&auto=format&fit=crop" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@bellavista" />
+  <meta name="twitter:image"
+    content="https://images.unsplash.com/photo-1514362545857-3bc16549766b?q=80&w=1200&auto=format&fit=crop" />
+
+  <link rel="icon" type="image/svg+xml" href="/placeholder.svg" />
+
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // https://github.com/rafgraph/spa-github-pages
+    // This script checks to see if a redirect is present in the query string
+    // and converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to refresh the page.
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

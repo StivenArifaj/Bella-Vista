@@ -1,0 +1,110 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Premium Palette: Warm Neutrals & Deep Charcoal */
+    --background: 30 20% 96%; /* #f7f5f2 - Creamy White */
+    --foreground: 20 10% 15%; /* #2b2724 - Deep Charcoal */
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 15%;
+
+    /* Gold / Bronze Accent */
+    --primary: 35 40% 45%; /* #a18045 - Antique Gold */
+    --primary-foreground: 30 20% 96%;
+
+    --secondary: 30 15% 90%; /* Light Beige */
+    --secondary-foreground: 20 10% 15%;
+
+    --muted: 30 10% 94%;
+    --muted-foreground: 25 5% 45%;
+
+    --accent: 35 50% 55%; /* Brighter Gold for accents */
+    --accent-foreground: 20 10% 15%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 35 40% 45%;
+
+    --radius: 0.5rem; /* Sharper, more elegant corners */
+  }
+
+  .dark {
+    --background: 20 10% 10%; /* #1c1a19 */
+    --foreground: 30 20% 96%;
+    --card: 20 10% 12%;
+    --card-foreground: 30 20% 96%;
+    --popover: 20 10% 12%;
+    --popover-foreground: 30 20% 96%;
+    --primary: 35 40% 55%;
+    --primary-foreground: 20 10% 10%;
+    --secondary: 20 10% 18%;
+    --secondary-foreground: 30 20% 96%;
+    --muted: 20 10% 18%;
+    --muted-foreground: 25 5% 65%;
+    --accent: 35 40% 55%;
+    --accent-foreground: 30 20% 96%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 35 40% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight text-foreground;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+  
+  /* Usage: className="h1-display" */
+  .h1-display {
+    @apply font-serif text-5xl md:text-7xl font-medium leading-[1.1] tracking-tight;
+  }
+  
+  .h2-title {
+    @apply font-serif text-3xl md:text-4xl font-medium tracking-wide;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg leading-relaxed text-muted-foreground;
+  }
+
+  /* Interactive Elements */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-input bg-transparent px-8 py-3 text-sm font-medium transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:border-accent hover:scale-[1.02];
+  }
+
+  .glass-nav {
+    @apply bg-background/80 backdrop-blur-md border-b border-border/40;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-xl hover:-translate-y-1;
+  }
+}
